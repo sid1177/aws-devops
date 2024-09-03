@@ -17,11 +17,11 @@ phases:
   post_build:
     commands:
       - echo Uploading artifacts to S3
-      - mkdir build
+      #- mkdir build
       - ls -la
-      - zip -r artifact.zip . -x 'build/*'
-      - cp artifact.zip build/
-      - aws s3 cp ./build/ s3://code-build-deploy-bucket/ --recursive
+      #- zip -r artifact.zip . -x 'build/*'
+      #- cp artifact.zip build/
+      #- aws s3 cp ./build/ s3://code-build-deploy-bucket/ --recursive
 
 artifacts:
   files:
