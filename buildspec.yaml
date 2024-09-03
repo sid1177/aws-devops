@@ -19,7 +19,7 @@ phases:
       - echo Uploading artifacts to S3
       - mkdir build
       - ls -la
-      - cp -r ./* build/
+      - zip -r artifact.zip . -x 'build/*'
       - aws s3 cp ./build/ s3://code-build-deploy-bucket/ --recursive
 
 artifacts:
